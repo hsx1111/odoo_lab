@@ -1,0 +1,43 @@
+@model WebApp.Controllers.OrderViewModel
+
+<div class="container mt-4">
+    <h2>Suivi commande</h2>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name (ID: @Model.Id)</h5>
+            <p class="card-text">
+                <b>Client:</b> @Model.CustomerName <br />
+                <b>Date:</b> @Model.DateOrder <br />
+                <b>État:</b> @Model.State <br />
+                <b>Total:</b> @Model.Total.ToString("0.00") €
+            </p>
+        </div>
+    </div>
+
+    <h4 class="mt-4">Lignes</h4>
+
+    <table class="table table-striped mt-2">
+        <thead>
+            <tr>
+                <th>Produit</th>
+                <th class="text-end">Quantité</th>
+                <th class="text-end">Prix unité</th>
+                <th class="text-end">Sous-total</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var l in Model.Lines)
+        {
+            <tr>
+                <td>@l.ProductName</td>
+                <td class="text-end">@l.Quantity</td>
+                <td class="text-end">@l.UnitPrice.ToString("0.00") €</td>
+                <td class="text-end">@l.Subtotal.ToString("0.00") €</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <a class="btn btn-secondary" href="/">Retour</a>
+</div>

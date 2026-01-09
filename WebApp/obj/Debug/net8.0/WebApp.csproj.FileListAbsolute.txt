@@ -1,0 +1,61 @@
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/WebApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/WebApp.AssemblyInfoInputs.cache
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/WebApp.AssemblyInfo.cs
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/WebApp.csproj.CoreCompileInputs.cache
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/WebApp.MvcApplicationPartsAssemblyInfo.cache
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/WebApp.RazorAssemblyInfo.cache
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/WebApp.RazorAssemblyInfo.cs
+/Users/husseinsakr/Downloads/WebApp/bin/Debug/net8.0/appsettings.Development.json
+/Users/husseinsakr/Downloads/WebApp/bin/Debug/net8.0/appsettings.json
+/Users/husseinsakr/Downloads/WebApp/bin/Debug/net8.0/WebApp.staticwebassets.runtime.json
+/Users/husseinsakr/Downloads/WebApp/bin/Debug/net8.0/WebApp
+/Users/husseinsakr/Downloads/WebApp/bin/Debug/net8.0/WebApp.deps.json
+/Users/husseinsakr/Downloads/WebApp/bin/Debug/net8.0/WebApp.runtimeconfig.json
+/Users/husseinsakr/Downloads/WebApp/bin/Debug/net8.0/WebApp.dll
+/Users/husseinsakr/Downloads/WebApp/bin/Debug/net8.0/WebApp.pdb
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/staticwebassets.build.json
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/staticwebassets.development.json
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/staticwebassets/msbuild.WebApp.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/staticwebassets/msbuild.build.WebApp.props
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.WebApp.props
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.WebApp.props
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/staticwebassets.pack.json
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/scopedcss/bundle/WebApp.styles.css
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/scopedcss/projectbundle/WebApp.bundle.scp.css
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/WebApp.dll
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/refint/WebApp.dll
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/WebApp.pdb
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/WebApp.genruntimeconfig.cache
+/Users/husseinsakr/Downloads/WebApp/obj/Debug/net8.0/ref/WebApp.dll
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/bin/Debug/net8.0/appsettings.Development.json
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/bin/Debug/net8.0/appsettings.json
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/bin/Debug/net8.0/WebApp.staticwebassets.runtime.json
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/bin/Debug/net8.0/WebApp
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/bin/Debug/net8.0/WebApp.deps.json
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/bin/Debug/net8.0/WebApp.runtimeconfig.json
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/bin/Debug/net8.0/WebApp.dll
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/bin/Debug/net8.0/WebApp.pdb
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/WebApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/WebApp.AssemblyInfoInputs.cache
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/WebApp.AssemblyInfo.cs
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/WebApp.csproj.CoreCompileInputs.cache
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/WebApp.MvcApplicationPartsAssemblyInfo.cache
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/WebApp.RazorAssemblyInfo.cache
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/WebApp.RazorAssemblyInfo.cs
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/WebApp.sourcelink.json
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/staticwebassets.build.json
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/staticwebassets.development.json
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/staticwebassets/msbuild.WebApp.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/staticwebassets/msbuild.build.WebApp.props
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.WebApp.props
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.WebApp.props
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/staticwebassets.pack.json
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/scopedcss/bundle/WebApp.styles.css
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/scopedcss/projectbundle/WebApp.bundle.scp.css
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/WebApp.dll
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/refint/WebApp.dll
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/WebApp.pdb
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/WebApp.genruntimeconfig.cache
+/Users/husseinsakr/Documents/code/IETCPS/logiciel gestion intégrés/odoo_lab/WebApp/obj/Debug/net8.0/ref/WebApp.dll

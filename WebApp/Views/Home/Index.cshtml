@@ -1,0 +1,197 @@
+﻿@using WebApp.Controllers
+@{
+    ViewData["Title"] = "Catalogue Odoo";
+    var success = ViewBag.Success as bool?;
+    var message = ViewBag.Message as string;
+    var products = ViewBag.Products as List<ProductViewModel>;
+    string url = ViewBag.OdooUrl ?? "http://localhost:8069";
+    string db = ViewBag.OdooDb ?? "odoo";
+    string login = ViewBag.OdooLogin ?? "admin";
+    string password = ViewBag.OdooPassword ?? "admin";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-3">Catalogue produits Odoo</h1>
+    <p class="text-muted">
+        Connexion à Odoo via API JSON-RPC (<code>/web/session/authenticate</code> +
+        <code>/web/dataset/call_kw</code>).
+    </p>
+
+    <hr />
+
+    <!-- Formulaire de configuration -->
+    <form asp-action="Connect" method="post" class="card shadow-sm mb-4">
+        <div class="card-header">
+            <strong>Configuration Odoo</strong>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="odooUrl" class="form-label">URL Odoo</label>
+                    <input type="text" class="form-control" id="odooUrl" name="odooUrl"
+                           value="@url" placeholder="http://localhost:8069" />
+                </div>
+                <div class="col-md-6">
+                    <label for="odooDb" class="form-label">Base de données</label>
+                    <input type="text" class="form-control" id="odooDb" name="odooDb"
+                           value="@db" placeholder="odoo" />
+                </div>
+                <div class="col-md-6">
+                    <label for="odooLogin" class="form-label">Utilisateur</label>
+                    <input type="text" class="form-control" id="odooLogin" name="odooLogin"
+                           value="@login" placeholder="admin" />
+                </div>
+                <div class="col-md-6">
+                    <label for="odooPassword" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="odooPassword" name="odooPassword"
+                           value="@password" />
+                </div>
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center">
+            <button type="submit" class="btn btn-primary">
+                🔄 Se connecter et charger les produits
+            </button>
+            <small class="text-muted">
+                Valeurs par défaut : URL <code>http://localhost:8069</code>, DB <code>odoo_lab</code>, user <code>admin</code>, pass <code>admin</code>.
+            </small>
+        </div>
+    </form>
+
+    <!-- Messages -->
+    @if (success.HasValue)
+    {
+        <div class="mb-3">
+            @if (success.Value)
+            {
+                <div class="alert alert-success">
+                    <div>@message</div>
+
+                    @* Bouton Suivi commande *@
+                    @if (ViewBag.CreatedOrderId != null)
+                    {
+                        <form method="get" asp-action="Order" class="mt-2">
+                            <input type="hidden" name="odooUrl" value="@ViewBag.OdooUrl" />
+                            <input type="hidden" name="odooDb" value="@ViewBag.OdooDb" />
+                            <input type="hidden" name="odooLogin" value="@ViewBag.OdooLogin" />
+                            <input type="hidden" name="odooPassword" value="@ViewBag.OdooPassword" />
+                            <input type="hidden" name="orderId" value="@ViewBag.CreatedOrderId" />
+
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                Suivre la commande
+                            </button>
+                        </form>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    @message
+                </div>
+            }
+        </div>
+    }
+
+
+
+    <!-- Tableau des produits -->
+    @if (products != null && products.Count > 0)
+    {
+        <div class="card shadow-sm">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <strong>Produits (propriétés locatives)</strong>
+                <span class="text-muted small">@products.Count produit(s)</span>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-sm table-striped mb-0 align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Action</th>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Référence</th>
+                            <th>Catégorie</th>
+                            <th class="text-end">Prix</th>
+                            <th class="text-end">Stock</th>
+                            <th>Location (invités / lits / chambres / sdb)</th>
+                            <th>Équipements</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var p in products)
+                        {
+                            var isRental = p.MaxGuests > 0;
+                            <tr>
+                                <td>
+                                    <form method="post" asp-action="CreateOrder" style="display:inline;">
+                                        <input type="hidden" name="odooUrl" value="@ViewBag.OdooUrl" />
+                                        <input type="hidden" name="odooDb" value="@ViewBag.OdooDb" />
+                                        <input type="hidden" name="odooLogin" value="@ViewBag.OdooLogin" />
+                                        <input type="hidden" name="odooPassword" value="@ViewBag.OdooPassword" />
+
+                                        <input type="hidden" name="productId" value="@p.Id" />
+
+                                        <input type="number"
+                                            name="quantity"
+                                            value="1"
+                                            min="1"
+                                            class="form-control form-control-sm"
+                                            style="width: 90px; display:inline-block; margin-right:6px;" />
+
+                                        <button type="submit" class="btn btn-sm btn-success">
+                                            Créer commande
+                                        </button>
+                                    </form>
+                                </td>
+                                <td>@p.Name</td>
+                                <td>@p.Type</td>
+                                <td>@(string.IsNullOrEmpty(p.DefaultCode) ? "—" : p.DefaultCode)</td>
+                                <td>@(string.IsNullOrEmpty(p.CategoryName) ? "—" : p.CategoryName)</td>
+                                <td class="text-end">@p.ListPrice.ToString("0.00") €@(isRental ? " / nuit" : "")</td>
+                                <td class="text-end">@p.QtyAvailable.ToString("0.##")</td>
+                                <td>
+                                    @if (isRental)
+                                    {
+                                        @($"{p.MaxGuests} invités, {p.Beds} lits, {p.Bedrooms} chambres, {p.Bathrooms} sdb")
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">—</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (isRental)
+                                    {
+                                        var labels = new List<string>();
+                                        if (p.PoolAvailable) labels.Add("Piscine");
+                                        if (p.AirConditioningAvailable) labels.Add("Climatisation");
+
+                                        if (labels.Count == 0)
+                                        {
+                                            <span class="text-muted">—</span>
+                                        }
+                                        else
+                                        {
+                                            @string.Join(", ", labels)
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">—</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else if (success == true)
+    {
+        <div class="alert alert-info">
+            Aucun produit trouvé avec les critères actuels (par ex. <code>max_guests &gt; 0</code>).
+        </div>
+    }
+</div>
