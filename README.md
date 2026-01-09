@@ -65,6 +65,7 @@ L’interface Odoo est alors accessible sur :
 * Créer une base de données nommée : **`odoo_lab`**
 * Activer les applications nécessaires (Ventes, Produits)
 * Créer ou utiliser l’utilisateur `admin`
+* suivre les étapes du fichier : ODOO_GUIDE.PDF
 
 ---
 
